@@ -55,14 +55,34 @@ It has 3 types:
 
   ## javascript:
 
-  In the below example function represents as a keyword . var,let const are the function scopes that has been used.
+  In the code below, we have a global variable globalVariable that is accessible throughout the code.
+  Within the addNumbers function, we have local variables localVariable and blockScopedVariable that are only accessible within the function.
+
+The function addNumbers takes two parameters a and b and adds them to the globalVariable, localVariable, and blockScopedVariable. 
+
+The sum is then printed to the console.
 
   ```js
-  function myFunction(){
-  var carName="Volvo";
-  let number=30;
-  const value=10;
+  // Global variable
+   var globalVariable = 10;
+
+  function addNumbers(a, b) {
+  // Local variables
+  var localVariable = 5;
+  let blockScopedVariable = 15;
+
+  // Accessing global variable
+  var sum = globalVariable + a + b;
+
+  // Accessing local variables
+  sum += localVariable;
+  sum += blockScopedVariable;
+
+  console.log("Sum:", sum);
   }
+
+   addNumbers(2, 3);
+  
   ```
 
   ## TypeScript:
@@ -256,6 +276,12 @@ func addNumbers(a, b int) int {
 
 ## C ,C++, Objective -C:
 
+These examples demonstrate a function addNumbers that takes two integers as parameters and returns their sum.
+
+The variables num1 and num2 are defined in the main function and passed as arguments to addNumbers.
+
+The resulting sum is stored in the result variable and displayed on the console using printf (C), std::cout (C++), or NSLog (Objective-C).
+
 C
  ```C
   #include<stdio.h>
@@ -311,7 +337,7 @@ int main(int argc, const char * argv[]) {
 
   ```
 
-     
+This will give the complete view about variables ,keywords ,variable scopes used in different programming languages.
 
 
 
