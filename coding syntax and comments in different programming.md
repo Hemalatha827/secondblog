@@ -1,8 +1,8 @@
 # ** Coding Syntax and Comments in Different Langauges**
 
-https://c8.alamy.com/comp/FRWRM2/syntax-word-cloud-concept-FRWRM2.jpg
 
-## Contents :
+
+## Table of Contents :
 
 In this Blog you are going to learn  about the   keywords , Variables, Variables scope like const, let , final in various programming languages.
 
@@ -201,22 +201,117 @@ fun addNumbers(num1: Int, num2: Int): Int {
 }
  
   ```
+
+  ## Swift:
+  
+  Here in this program func is a keyword. a ,b are the variables which has a variable scope as let . The  scope let keyword can be accessed inside a function.
+  It will add a  and b and final value will be stored in the sum.
+    
+  ```Swift
+  func addNumbers() {
+    let a = 5 // Local variable within the function
+    let b = 10 // Local variable within the function
+    let sum = a + b // Local variable within the function
+    
+    print("Sum: \(sum)")
+}
+
+addNumbers() // Calling the function
+  ```
+
+##Golang:
+
+we have a global variable globalResult that can be accessed throughout the program. The main function defines local variables num1 and num2, which are passed as arguments to the addNumbers function. 
+The addNumbers function has its own local variable result, and the result is assigned to the globalResult variable. Finally, the sum is printed in the main function along with the value of globalResult.
+
+   ```Golang
+  // Global variables
+var globalResult int
+
+func main() {
+	// Local variables within main function
+	var num1, num2 int = 10, 20
+
+	// Calling the addNumbers function
+	sum := addNumbers(num1, num2)
+	fmt.Println("Sum:", sum)
+
+	// Accessing the globalResult variable
+	fmt.Println("Global Result:", globalResult)
+}
+
+// Function to add two numbers
+func addNumbers(a, b int) int {
+	// Local variable within addNumbers function
+	result := a + b
+
+	// Assigning the result to the globalResult variable
+	globalResult = result
+
+	// Returning the result
+	return result
+}
+
+  ```
+
+## C ,C++, Objective -C:
+
+C
+ ```C
+  #include<stdio.h>
+  int addNumbers(int a, int b) {
+    int sum = a + b;
+    return sum;
+}
+
+int main() {
+    int num1 = 5;
+    int num2 = 3;
+    int result = addNumbers(num1, num2);
+    printf("The sum is: %d\n", result);
+    return 0;
+}
+  ```
+C++
+
+ ```C++
+  # include<iostream>
+  int addNumbers(int a, int b) {
+    int sum = a + b;
+    return sum;
+}
+
+int main() {
+    int num1 = 5;
+    int num2 = 3;
+    int result = addNumbers(num1, num2);
+    std::cout << "The sum is: " << result << std::endl;
+    return 0;
+}
+  ```
+
+Objective-C
+  ```Objective-C
+  #import <Foundation/Foundation.h>
+
+NSInteger addNumbers(NSInteger a, NSInteger b) {
+    NSInteger sum = a + b;
+    return sum;
+}
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        NSInteger num1 = 5;
+        NSInteger num2 = 3;
+        NSInteger result = addNumbers(num1, num2);
+        NSLog(@"The sum is: %ld", result);
+    }
+    return 0;
+}
+
+  ```
+
      
-  
-
-
-
-
-
-  
-   
-
-
-  
-
-
-
-
 
 
 
